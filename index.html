@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Parllay</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+   <!-- Custom Fonts -->
+   <link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Custom CSS -->
+    <link href="css/styles.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->  
+
+    <link rel="stylesheet" href="/css/jquery-ui.css">
+    <link rel="stylesheet" href="/css/animate.css">
+    <link rel="stylesheet" href="/css/display.css">
+    <link rel="stylesheet" href="/css/parllay-slider.css">
+
+
+    <script type="text/javascript" src="/js/lib/jquery.js"></script>
+    
+    <script src="/js/config.js"></script>
+    
+    <script type="text/javascript" src="/js/lib/moment.js"></script>
+    <script type="text/javascript" src="/js/billboards/parllay-ajax.js"></script>
+    <script type="text/javascript" src="/js/billboards/helpers.js"></script>
+    <script type="text/javascript" src="/js/billboards/streaming-helper.js"></script>
+    <script type="text/javascript" src="/js/lib/isotope.pkgd.js"></script>
+    <script type="text/javascript" src="/js/lib/packery.pkgd.min.js"></script>
+    <script type="text/javascript" src="/js/lib/packery-mode.pkgd.js"></script>
+    
+    <script type="text/javascript" src="/js/lib/browser-id3-writer.4.0.0.js"></script>
+    <script type="text/javascript" src="/js/lib/StreamSaver.js"></script>
+    <script type="text/javascript" src="/js/lib/web-streams-polyfill.min.js"></script>   
+
+    <script type="text/javascript" src="/js/billboards/parllay-ajax.js"></script>
+    <script type="text/javascript" src="/js/billboards/helpers.js"></script>
+    <script type="text/javascript" src="/js/billboards/streaming-helper.js"></script>
+    <script src="/js/script.js"></script>
+    <script type="text/javascript" src="/js/lib/isotope.pkgd.js"></script>
+    <script type="text/javascript" src="/js/lib/packery.pkgd.min.js"></script>
+    <script type="text/javascript" src="/js/lib/packery-mode.pkgd.js"></script>
+
+    <script async="" src="/js/lib/analytics.js"></script>
+    <script type="text/javascript" src="/js/billboards/php.js"></script>
+    <script type="text/javascript" src="/js/lib/socket.io-1.3.5.js"></script>
+    <script type="text/javascript" language="javascript" src="/js/lib/moment.min.js"></script>
+    <script type="text/javascript" src="/js/lib/handlebars-v4.0.2.js"></script>
+    <script type="text/javascript" src="/js/billboards/helpers.js"></script>
+    <script type="text/javascript" src="/js/billboards/resize.image.js"></script>
+    <script type="text/javascript" src="/js/lib/jquery.timeago.js"></script>
+    <script src="/js/billboards/parllay-slider.js"></script>
+    <script type="text/javascript" src="/js/billboards/parllay-display.js"></script>
+    <script src="/js/billboards/display.js"></script>
+ 
+ 
+    <style type="text/css">
+        body,
+        html{
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .status-button{
+            position: fixed;
+            width: 5px;
+            height: 5px;
+            z-index: 1;
+            bottom: 5px;
+            right: 5px;
+            border-radius: 50%;
+            display: none;
+        }
+
+        .status-button.green{
+            background: green;
+            display: block;
+        }
+
+        .status-button.red{
+            background: red;
+            display: block;
+        }
+
+        .status-button.yellow{
+            background: yellow;
+            display: block;
+        }
+        .status-button.orange{
+            background: orange;
+            display: block;
+        }
+        
+        .public-display-advanced-settings.disabled{
+            opacity: 0.5;
+            cursor: default;
+        }
+      </style>
+
+    
+</head>
+
+<body>
+        
+
+        <div id="apptitle"><img src="assets/images/socialbillboards.gif" class="img-responsive" title="SocailBillboards"/></div>    
+        <div id="screen" class="screen">  
+           
+           <div class="row firstscreen ">
+               <div class="container text-center ">
+                   <div class="screenone slideanim">
+                       <img src="assets/images/logo.png" title="Parllay" class="logo"/>
+                       <div class="screenonetxt"><p>powered by Parllay</p></div>
+                   </div>            
+               </div>    
+           </div>
+       
+           <div class="container secscreen">
+               
+               <div class="row headerlogo ">
+                   <div class="col-lg-4 ">
+                       <img src="assets/images/logo.png" class="img-responsive" title="Parllay"/>
+                   </div>                                                                
+                   <div class="col-lg-4"></div>     
+                   <div class="col-lg-4"></div>
+               </div>
+               
+               <div class="row seccontent slideanim">
+                   <div class="col-lg-12">
+                   <p class="sbcontenthead">Welcome to Social Billboards</p>
+                   <hr>
+                   <p class="sbcontentdesc">Setting up your screen will take less than five minutes. Hang tight!</p>
+                   </div>
+               </div>
+       
+               <div class="row thrdcontent slideanim">
+                   <div class="col-lg-12">
+                       <p class="sbcontenthead">Register this device</p> 
+                       <br/>
+                       <p class="sbcontentdesc">Sign in at <a id="clickwebview" href="" class="brandsapplink"></a>
+                           and add this device to your account with this activation key.</p>
+                       <div class="activationcode"><p class="randomCode"></p></div>
+                       
+                   </div>
+               </div>
+           </div>   
+           <div class="txt"></div>
+           <!-- <div class="alert alert-danger"> </div> -->
+        </div>
+
+<div id="container">
+
+</div> 
+<!-- 
+<div id="CheckErrInfo" myKey="">
+
+</div>  -->
+<script src="/js/lib/bootstrap.min.js"></script>
+<script src="/js/billboards/split-screen.js"></script>
+<script src="/js/sbLogger.js"></script>
+<script src="/js/sbHelper.js"></script>
+<script src="/js/sbIndexedDb.js"></script> 
+<script src="/js/firstTimeSetup.js"></script>
+<script src="/js/sbCache.js"></script> 
+<script src="/js/sbslidelog.js"></script>  
+<script src="/js/template.js"></script>
+<script src="/js/playlist.js"></script>
+<script src="/js/filesystem.js"></script>
+<script src="/js/download.js"></script>
+<script src="/js/socialbillboard.js"></script>
+<script src="/js/viewport.js"></script>
+<script src="/js/circularlist.js"></script>
+<script src="/js/repeatlist.js"></script>
+<!--  
+
+
+
+<script src="/js/repeatlist.js"></script>
+<script src="/js/player.js"></script>
+<script src="/js/playlist.js"></script>
+<script src="/js/sbPlaylist.js"></script>
+<script src="/js/sbRender.js"></script>
+<script src="/js/socialbillboard.js"></script> -->
+
+
+
+</body>
+</html>
+
+

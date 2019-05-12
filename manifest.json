@@ -1,0 +1,24 @@
+{
+    "name": "Social Billboards - schedule",
+    "description": "Bring your screens to life",
+    "version": "4.1.0",
+    "manifest_version": 2,
+    "app": {
+      "background": {
+        "scripts": ["js/background.js"],
+        "css":["https://fonts.googleapis.com/css?family=Actor"]
+      }
+    },
+    "icons": {"128": "assets/images/icon128.png", "16": "assets/images/icon16.png" },
+    "permissions": [
+      "webview",
+      "storage",
+      "power",
+      "unlimitedStorage",
+      "syncFileSystem",
+      "<all_urls>",
+      "enterprise.deviceAttributes",       
+      {"fileSystem": ["write", "retainEntries", "directory"]}
+    ],
+    "kiosk_enabled" : true
+  } 
